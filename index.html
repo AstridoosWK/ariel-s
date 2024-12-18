@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para o Amor da Minha Vida</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #ff7eb3, #ff758c);
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+    }
+    img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .message {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+    .quote {
+      font-style: italic;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    .lyrics {
+      font-style: italic;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+    .spotify-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #1db954;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .spotify-button:hover {
+      background-color: #1aa34a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Espaço para a foto -->
+    <img src="foto.jpg" alt="Nossa foto" id="photo">
+
+    <h1>Estamos juntos há:</h1>
+    <p id="days-counter">0</p>
+    <h2>dias de amor e felicidade!</h2>
+    <div class="message">
+      <p>Meu amor,</p>
+      <p>Desde o momento em que você entrou na minha vida, tudo mudou para melhor. Você é a pessoa mais especial que já conheci, e todos os dias ao seu lado são como um presente. Eu te amo mais do que as palavras podem expressar, e sou imensamente grato por ter você ao meu lado. Você é a minha luz, o meu porto seguro e a razão de todos os meus sorrisos. Obrigado por ser você, por ser o meu amor, a melhor coisa que já aconteceu na minha vida.</p>
+    </div>
+    <div class="quote">
+      <p>“O amor é um ato de confiança em que reconhecemos o outro como essencial para nossa própria existência.”</p>
+      <p>— Jean-Paul Sartre</p>
+    </div>
+    <div class="lyrics">
+      <p>"And if a double-decker bus<br>Crashes into us<br>To die by your side<br>Is such a heavenly way to die."</p>
+      <p>— The Smiths</p>
+    </div>
+    <!-- Botão para o Spotify -->
+    <a href="https://open.spotify.com/track/0wJoRiX5K5BxlqZTolB2LD" target="_blank" class="spotify-button">
+      Ouça a música no Spotify
+    </a>
+  </div>
+
+  <script>
+    // Data inicial do relacionamento
+    const startDate = new Date("2024-10-21");
+
+    // Função para calcular os dias
+    function calculateDays() {
+      const today = new Date();
+      const timeDifference = today - startDate; // Diferença em milissegundos
+      const daysTogether = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); // Converter para dias
+      document.getElementById("days-counter").textContent = daysTogether;
+    }
+
+    // Atualiza o contador ao carregar a página
+    calculateDays();
+
+    // Atualiza automaticamente todos os dias
+    setInterval(calculateDays, 1000 * 60 * 60 * 24);
+  </script>
+</body>
+</html>
